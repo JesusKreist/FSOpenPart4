@@ -1,9 +1,13 @@
 const info = (...args) => {
-  console.log(...args);
+  if (process.env !== "test") {
+    console.log(...args);
+  }
 };
 
 const error = (...args) => {
-  console.error(...args);
+  if (process.env !== "test") {
+    console.error(...args);
+  }
 };
 
 module.exports = {

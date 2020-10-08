@@ -1,5 +1,3 @@
-const listHelper = require("../utils/list_helper");
-
 const listWithOneBlog = [
   {
     _id: "5a422aa71b54a676234d17f8",
@@ -85,45 +83,18 @@ const mostLikedAuthor = {
   likes: 17,
 };
 
-test("dummy returns one", () => {
-  const blogs = [];
+const newPost = {
+  title: "New Post",
+  author: "admin",
+  url: "localhost",
+  likes: 1,
+};
 
-  const result = listHelper.dummy(blogs);
-  expect(result).toBe(1);
-});
-
-describe("total likes", () => {
-  test("when list has only one blog, equals the likes of that", () => {
-    const result = listHelper.totalLikes(listWithOneBlog);
-    expect(result).toBe(5);
-  });
-
-  test("list with many blogs", () => {
-    const result = listHelper.totalLikes(manyBlogs);
-    expect(result).toBe(36);
-  });
-});
-
-describe("blog with the most likes", () => {
-  test("blog with the most likes", () => {
-    const result = listHelper.favouriteBlog(manyBlogs);
-
-    expect(result).toEqual(maxBlog);
-  });
-});
-
-describe("author with the most blogs", () => {
-  test("most common author", () => {
-    const result = listHelper.mostBlogs(manyBlogs);
-
-    expect(result).toEqual(commonAuthor);
-  });
-});
-
-describe("author with most likes", () => {
-  test("get most liked author", () => {
-    const result = listHelper.mostLikes(manyBlogs);
-
-    expect(result).toEqual(mostLikedAuthor);
-  });
-});
+module.exports = {
+  listWithOneBlog,
+  manyBlogs,
+  maxBlog,
+  commonAuthor,
+  mostLikedAuthor,
+  newPost,
+};
