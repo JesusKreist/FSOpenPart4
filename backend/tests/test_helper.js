@@ -90,6 +90,12 @@ const newPost = {
   likes: 1,
 };
 
+const defaultUser = {
+  username: "testuser1",
+  password: "123456AbcDe4!$",
+  name: "Test User",
+};
+
 module.exports = {
   listWithOneBlog,
   manyBlogs,
@@ -97,4 +103,5 @@ module.exports = {
   commonAuthor,
   mostLikedAuthor,
   newPost,
+  defaultUser,
 };
